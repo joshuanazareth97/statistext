@@ -1,0 +1,44 @@
+{
+    "name": "StatisText",
+    "version": "0.1.1",
+    "description": "Displays useful statistics about a selected piece of text.",
+    "manifest_version": 2,
+    "icons": {
+        "48": "logo_48.png",
+        "128": "logo_128.png"
+    },
+    "permissions": [
+        "tabs",
+        "<all_urls>"
+    ],
+    "browser_action": {
+        "default_title": "Count Words",
+        "default_popup": "stats.html"
+    },
+    "background": {
+        "scripts": [
+            "hot-reload.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "countWords.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Q",
+                "mac": "MacCtrl+Shift+Q"
+            },
+            "description": "Opens stats.html"
+        }
+    }
+}

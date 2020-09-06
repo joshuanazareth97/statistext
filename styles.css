@@ -1,0 +1,63 @@
+:root {
+    --primary-dark: #542e71;
+    --primary-light: #c287e8;
+    --text-light: #FEFFFE;
+    --text-dark: #3F4045;
+    --bg-light: #fffaf0;  
+    --bg-dark: #413F54;
+    --emphasis: #C73E1D;
+    --alert: #C59849;
+}
+
+.emphasize {
+    color: var(--emphasis);
+}
+
+body {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+}
+
+.container {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.empty {
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+.empty p {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.title {
+    margin: 0 0 1rem 0;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--text-light);
+    background-color: var(--bg-dark);
+  }
+
+  body a {
+    color: var(--primary-light);
+  }
+}
